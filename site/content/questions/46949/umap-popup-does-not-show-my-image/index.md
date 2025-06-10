@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>Hello,</p>
-<p>I don(t understand why Umap doesn't show my image in the popup...I've tried to do this during 3 hours...that's why I ask for help. My Umap is : <a href="http://u.osmfr.org/m/62465/">http://u.osmfr.org/m/62465/</a> and I've put in the description the link of my image : `{{\<a href="https://magali.smugmug.com/2015/201511Luberon/i-GT9Ffqq/0/L/DSC_0001-L.jpg">https://magali.smugmug.com/2015/201511Luberon/i-GT9Ffqq/0/L/DSC_0001-L.jpg</a>}}` If you go to my Umap, the marker who is concerned is on the top of the map.</p>
+<p>I don(t understand why Umap doesn't show my image in the popup...I've tried to do this during 3 hours...that's why I ask for help. My Umap is : <a href="http://u.osmfr.org/m/62465/">http://u.osmfr.org/m/62465/</a> and I've put in the description the link of my image : {{https://magali.smugmug.com/2015/201511Luberon/i-GT9Ffqq/0/L/DSC_0001-L.jpg}} If you go to my Umap, the marker who is concerned is on the top of the map.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-umap" rel="tag" title="see questions tagged &#39;umap&#39;">umap</span>

@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "Import iframe into Umap popup"
-description = '''I am trying to import data (tried both csv and geojson) into Umaps in order to embed videos and images into popups. I am using the following format in the &quot;popup content template&quot; to import the links from my data sheets: `{{{EmbedURL}}}` My images are displaying property in the popup, but I&#x27;m seeing b...'''
+description = '''I am trying to import data (tried both csv and geojson) into Umaps in order to embed videos and images into popups. I am using the following format in the &quot;popup content template&quot; to import the links from my data sheets: {{{EmbedURL}}} My images are displaying property in the popup, but I&#x27;m seeing b...'''
 date = "2016-08-15T03:54:00Z"
 lastmod = "2016-08-15T03:54:00Z"
 weight = 51410
@@ -39,8 +39,8 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>I am trying to import data (tried both csv and geojson) into Umaps in order to embed videos and images into popups. I am using the following format in the "popup content template" to import the links from my data sheets: `{{{EmbedURL}}}`</p>
-<p>My images are displaying property in the popup, but I'm seeing broken links for all the videos. I have tried adding the video links manually in the description box for the popup and it works fine: `{{{\<a href="https://www.youtube.com/embed/8hy8y-7FbVA%7D%7D%7D">https://www.youtube.com/embed/8hy8y-7FbVA</a>}}}`</p>
+<p>I am trying to import data (tried both csv and geojson) into Umaps in order to embed videos and images into popups. I am using the following format in the "popup content template" to import the links from my data sheets: {{{EmbedURL}}}</p>
+<p>My images are displaying property in the popup, but I'm seeing broken links for all the videos. I have tried adding the video links manually in the description box for the popup and it works fine: {{{https://www.youtube.com/embed/8hy8y-7FbVA}}}</p>
 <p>But when I import this same link via csv and geojson, it doesn't display.</p>
 <p>Any thoughts would be greatly appreciated!</p>
 </div>

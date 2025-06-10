@@ -39,7 +39,7 @@ osqa_accepted = false
 </div></td>
 <td><div id="item-right">
 <div class="question-body">
-<p>Bonjour, J'ai un problème pour intégrer des fichiers sons. Le plus étrange est que ça marchait très bien avant hier, mais depuis hier plus rien, ça s'affiche "blanc". Voici le code que je tape : `{{{\<a href="http://blog.ac-versailles.fr/geophotographie/public/Sons_cite/Etape_1_Pont_de_Sevres_1.mp3%7D%7D%7D">http://blog.ac-versailles.fr/geophotographie/public/Sons_cite/Etape_1_Pont_de_Sevres_1.mp3</a>}}}` Est-ce lié à un problème momentané sur le serveur, ou y a-t-il quelque chose que je n'ai pas compris ? Merci de votre aide.</p>
+<p>Bonjour, J'ai un problème pour intégrer des fichiers sons. Le plus étrange est que ça marchait très bien avant hier, mais depuis hier plus rien, ça s'affiche "blanc". Voici le code que je tape : {{{http://blog.ac-versailles.fr/geophotographie/public/Sons_cite/Etape_1_Pont_de_Sevres_1.mp3}}} Est-ce lié à un problème momentané sur le serveur, ou y a-t-il quelque chose que je n'ai pas compris ? Merci de votre aide.</p>
 </div>
 <div id="question-tags" class="tags-container tags">
 <span class="post-tag tag-link-umap" rel="tag" title="see questions tagged &#39;umap&#39;">umap</span> <span class="post-tag tag-link-media" rel="tag" title="see questions tagged &#39;media&#39;">media</span> <span class="post-tag tag-link-pop-up" rel="tag" title="see questions tagged &#39;pop-up&#39;">pop-up</span>

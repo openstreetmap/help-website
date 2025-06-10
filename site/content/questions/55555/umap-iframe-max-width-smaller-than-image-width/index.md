@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "umap - iframe max width smaller than image width"
-description = '''For visual aesthetic purposed I&#x27;d like youtube videos to have the same width as images. Currently, images are bigger and that just doesn&#x27;t look good. Here&#x27;s a screenshot. Here, the youtube tag is just the default for iframes: `{{{https://www.youtube.com/embed/hmZ5S3WlKFg}}}`  The width of the image ab...'''
+description = '''For visual aesthetic purposed I&#x27;d like youtube videos to have the same width as images. Currently, images are bigger and that just doesn&#x27;t look good. Here&#x27;s a screenshot. Here, the youtube tag is just the default for iframes: {{{https://www.youtube.com/embed/hmZ5S3WlKFg}}}  The width of the image ab...'''
 date = "2017-04-11T12:51:00Z"
 lastmod = "2017-04-11T12:51:00Z"
 weight = 55555
@@ -41,10 +41,10 @@ osqa_accepted = false
 <div class="question-body">
 <p>For visual aesthetic purposed I'd like youtube videos to have the same width as images. Currently, images are bigger and that just doesn't look good.</p>
 <p>Here's a screenshot. Here, the youtube tag is just the default for iframes:</p>
-<p><strong>`{{{\<a href="https://www.youtube.com/embed/hmZ5S3WlKFg%7D%7D%7D">https://www.youtube.com/embed/hmZ5S3WlKFg</a>}}}`</strong></p>
+<p><strong>{{{https://www.youtube.com/embed/hmZ5S3WlKFg}}}</strong></p>
 <p><img src="http://i.imgur.com/oXqcOX2.png" alt="alt text" /></p>
 <p>The width of the image above seems to be 341px, so tried forcing the youtube window like this, but the image doesn't get bigger than that apparently:</p>
-<p><strong>`{{{\<a href="https://www.youtube.com/embed/hmZ5S3WlKFg%7C192*341%7D%7D%7D">https://www.youtube.com/embed/hmZ5S3WlKFg|192*341</a>}}}`</strong></p>
+<p><strong>{{{https://www.youtube.com/embed/hmZ5S3WlKFg|192*341}}}</strong></p>
 <p><img src="http://i.imgur.com/72mFssF.png" alt="alt text" /></p>
 </div>
 <div id="question-tags" class="tags-container tags">

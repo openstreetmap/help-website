@@ -139,7 +139,7 @@ One Answer:
 <div class="answer-body">
 <p>Ich kann nicht finden, wie das geht. Eventuell ist das eine absichtliche Funktion von uMap, dass sich Links in neuem Tab/Fenster öffnen.</p>
 <p>Ich habe <a href="http://umap.openstreetmap.fr/de/map/unbenannte-karte_54915#6/51.000/2.000">probiert</a>, ob man rohes HTML angeben kann: nein (ein Testlink wird escapet: <code>&amp;lt;a href="foo"&amp;gt;bar&amp;lt;/a&amp;gt;</code></p>
-<p>Ich schätze, dass du per iframe (<code>{{{\<a href="http://iframe.example.com">http://iframe.example.com</a>}}}</code>) eine andere Webseite einbinden könntest, wo du dann die gewünschten Links ohne Target setzt. Einfach ist das aber nicht.</p>
+<p>Ich schätze, dass du per iframe (<code>{{{http://iframe.example.com}}}</code>) eine andere Webseite einbinden könntest, wo du dann die gewünschten Links ohne Target setzt. Einfach ist das aber nicht.</p>
 </div>
 <div class="answer-controls post-controls">
 &#10;</div>

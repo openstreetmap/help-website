@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "image link"
-description = '''My map shows pins which are linked to images. In the description field of the pin I type the link to the picture such as : `{{http://ronddejardin.tcjnet.com/wp-content/uploads/sites/4/IMG_3124-2.jpg}}` but the picture does not show up when the edition is deactivated; Is there an explanation for this p...'''
+description = '''My map shows pins which are linked to images. In the description field of the pin I type the link to the picture such as : {{http://ronddejardin.tcjnet.com/wp-content/uploads/sites/4/IMG_3124-2.jpg}} but the picture does not show up when the edition is deactivated; Is there an explanation for this p...'''
 date = "2021-06-08T15:46:00Z"
 lastmod = "2021-06-09T21:04:00Z"
 weight = 80487
@@ -40,7 +40,7 @@ osqa_accepted = false
 <td><div id="item-right">
 <div class="question-body">
 <p>My map shows pins which are linked to images. In the description field of the pin I type the link to the picture such as :</p>
-<p><code>{{http://ronddejardin.tcjnet.com/wp-content/uploads/sites/4/IMG_3124-2.jpg}}</code></p>
+<p>{{http://ronddejardin.tcjnet.com/wp-content/uploads/sites/4/IMG_3124-2.jpg}}</p>
 <p>but the picture does not show up when the edition is deactivated; Is there an explanation for this problem ? Thanks</p>
 </div>
 <div id="question-tags" class="tags-container tags">

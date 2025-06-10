@@ -151,10 +151,10 @@ One Answer:
 <div class="answer-body">
 <p>I have to add this code depends on what I want:</p>
 <ul>
-<li><strong>Image:</strong> `"{{\<a href="http://imagen.url.com">http://imagen.url.com</a>}}` ⦁</li>
-<li><strong>Custom image width (in pixels):</strong> `{{\<a href="http://imagen.url.com">http://imagen.url.com</a>|width}}`<br />
-<strong>Iframe:</strong> `{{{\<a href="http://iframe.url.com">http://iframe.url.com</a>}}}`</li>
-<li><strong>Custom iframe heigh (in píxels):</strong> `{{{\<a href="http://iframe.url.com">http://iframe.url.com</a>|height}}}`</li>
+<li><strong>Image:</strong> {{http://imagen.url.com}} ⦁</li>
+<li><strong>Custom image width (in pixels):</strong> {{http://imagen.url.com|width}}<br />
+<strong>Iframe:</strong> {{{http://iframe.url.com}}}</li>
+<li><strong>Custom iframe heigh (in píxels):</strong> {{{http://iframe.url.com|height}}}</li>
 </ul>
 </div>
 <div class="answer-controls post-controls">

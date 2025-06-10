@@ -42,7 +42,7 @@ osqa_accepted = false
 <p>Hello,</p>
 <p>I want to iframe the following basic link in a POI but it does not work:</p>
 <p><a href="http://tgftp.nws.noaa.gov/data/forecasts/taf/stations/LFBO.TXT">http://tgftp.nws.noaa.gov/data/forecasts/taf/stations/LFBO.TXT</a></p>
-<p>Even with the following syntax in description field I get a blank POI: `{{{\<a href="http://tgftp.nws.noaa.gov/data/forecasts/taf/stations/LFBO.TXT%7D%7D%7D">http://tgftp.nws.noaa.gov/data/forecasts/taf/stations/LFBO.TXT</a>}}}`</p>
+<p>Even with the following syntax in description field I get a blank POI: {{{http://tgftp.nws.noaa.gov/data/forecasts/taf/stations/LFBO.TXT}}}</p>
 <p>Is there any limitation in OSM? How to display the content of the page into the POI?</p>
 <p>Thanks for your support</p>
 </div>

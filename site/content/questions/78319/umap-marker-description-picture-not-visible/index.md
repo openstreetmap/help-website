@@ -1,7 +1,7 @@
 +++
 type = "question"
 title = "uMap Marker description: picture not visible"
-description = '''Hello together, I&#x27;m working with uMap and want to add descriptions to my markers which include images. Syntax help gives 2 possibilities:   1. Image only: `{{http://image.url.com}}`   2. Image and width in pixels: `{{http://image.url.com|pixels}}`  I tried both types but as a result the marker descripti...'''
+description = '''Hello together, I&#x27;m working with uMap and want to add descriptions to my markers which include images. Syntax help gives 2 possibilities:   1. Image only: {{http://image.url.com}}   2. Image and width in pixels: {{http://image.url.com|pixels}}  I tried both types but as a result the marker descripti...'''
 date = "2021-01-10T21:13:00Z"
 lastmod = "2021-01-27T08:30:00Z"
 weight = 78319
@@ -42,8 +42,8 @@ osqa_accepted = false
 <p>Hello together,</p>
 <p>I'm working with uMap and want to add descriptions to my markers which include images.</p>
 <p>Syntax help gives 2 possibilities:</p>
-<p>1. Image only: <strong>`{{\<a href="http://image.url.com">http://image.url.com</a>}}`</strong></p>
-<p>2. Image and width in pixels: <strong>`{{\<a href="http://image.url.com">http://image.url.com</a>|pixels}}`</strong></p>
+<p>1. Image only: <strong>{{http://image.url.com}}</strong></p>
+<p>2. Image and width in pixels: <strong>{{http://image.url.com|pixels}}</strong></p>
 <p>I tried both types but as a result the marker description doesn't show the image but only the place holder for missing link.</p>
 <p>As type for the marker popup description I tried both "pop up (big)" and "sitebar". In the example I refer to a wikipedia picture just to ensure open access.</p>
 <p>Can somebody help?</p>

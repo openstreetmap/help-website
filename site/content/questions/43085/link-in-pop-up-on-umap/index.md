@@ -110,10 +110,10 @@ osqa_accepted = false
 <p>It is quite easy, actually. I found it in a sub-sub-menu in the umap interface: [[<a href="http://examppe.com">http://examppe.com</a>|Text for the link]]</p>
 <p>More: Einfacher Link: [[<a href="http://beispiel.com">http://beispiel.com</a>]]</p>
 <p>Link mit Text: [[<a href="http://beispiel.com">http://beispiel.com</a>|Text für den Link]]</p>
-<p>Bild: `{{\<a href="http://bild.url.com">http://bild.url.com</a>}}`</p>
-<p>Bild mit benutzerdefinierter Breite (in Pixel): `{{\<a href="http://bild.url.com">http://bild.url.com</a>|Breite}}`</p>
-<p>Iframe: `{{{\<a href="http://iframe.url.com">http://iframe.url.com</a>}}}`</p>
-<p>Iframe mit benutzerdefinierter Höhe (in Pixel): `{{{\<a href="http://iframe.url.com">http://iframe.url.com</a>|Höhe}}}`</p>
+<p>Bild: {{http://bild.url.com}}</p>
+<p>Bild mit benutzerdefinierter Breite (in Pixel): {{http://bild.url.com|Breite}}</p>
+<p>Iframe: {{{http://iframe.url.com}}}</p>
+<p>Iframe mit benutzerdefinierter Höhe (in Pixel): {{{http://iframe.url.com|Höhe}}}</p>
 <p>--- Für eine horizontale Linie</p>
 </div>
 <div class="answer-controls post-controls">
